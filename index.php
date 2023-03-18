@@ -22,8 +22,7 @@ for ($i = 0; $i < $options->length; $i++)
 {
    $option=$options->item($i);
    $ele=array();
-   array_push($ele,trim($option->getAttribute('value')));
-   array_push($ele,trim($option->nodeValue));
+   $ele['code']=trim($option->getAttribute('value'));
    array_push($data,$ele);
 }
 $array['currencies']=$data;
