@@ -16,16 +16,17 @@ $ixpath = new DOMXPath($idom);
 $options = $ixpath->evaluate("//select[@id='from_currency']/option");
 //nodeValue
 // getAttribute('value')
-$data=[];
+$data=array();
+$array=array();
 for ($i = 0; $i < $options->length; $i++) 
 {
-    
-    
    $option=$options->item($i);
-   $data[$i][0]=trim($option->getAttribute('value'));
-   $data[$i][1]=trim($option->nodeValue);
+   $ele=array();
+   array_push($ele,trim($option->getAttribute('value')));
+   array_push($ele,trim($option->nodeValue));
+   array_push($data,$ele);
 }
-
+$array['currencies']=$data;
 
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode($data);
+echo json_encode($array);
