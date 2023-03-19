@@ -25,7 +25,9 @@ http://localhost/Free_Exchange_Rates_API/
 
 
 This will return a JSON object containing all available currency codes.
-
+```json
+{"currencies":[{"code":"AED"},{"code":"AFN"},{"code":"XRP"},{"code":"YER"},{"code":"ZAR"},{"code":"ZMW"},{"code":"ZWL"}]}
+```
 ### Step 4: Convert currency
 
 To convert currency, use the following URL format:
