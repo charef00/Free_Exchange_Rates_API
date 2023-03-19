@@ -42,26 +42,13 @@ This will return a JSON object containing the exchange rate and the converted am
 
 If you want to use the API in a mobile app, you can't use `localhost` or `127.0.0.1` as the server address. Instead, use `10.0.2.2` as the server address in your mobile app's code. This will route requests to your local server on your development machine.
 
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-
-
-Replace `FROM_CURRENCY` with the three-letter currency code for the currency you want to convert from (e.g., "MAD" for Moroccan Dirham) and `TO_CURRENCY` with the three-letter currency code for the currency you want to convert to (e.g., "USD" for US Dollar).
-
-This will return a JSON object containing the exchange rate and the converted amount.
-
-### Remark for mobile developers
-
-If you want to use the API in a mobile app, you can't use `localhost` or `127.0.0.1` as the server address. Instead, use `10.0.2.2` as the server address in your mobile app's code. This will route requests to your local server on your development machine.
 
 ## Troubleshooting
 
 ### Volley error when using the API in localhost
 
 If you are using the API in localhost on a mobile device and encounter problems with Volley, such as "com.android.volley.NoConnectionError: java.io.IOException: Cleartext HTTP traffic to domain not permitted" you may need to create a file called "network_security_config.xml" in the "res/xml" directory of your Android project. Add the following code to this file:
-
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <base-config cleartextTrafficPermitted="true">
